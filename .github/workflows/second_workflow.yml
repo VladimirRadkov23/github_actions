@@ -12,7 +12,7 @@ jobs:
         run: |
           node -v
           npm -v
-  run-parallel-command:
+  run-parallel-command: # паралельный запуск
     runs-on: windows-latest
     steps:
       - name: Display node version on Windows

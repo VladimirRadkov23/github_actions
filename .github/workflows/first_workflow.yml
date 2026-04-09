@@ -1,5 +1,6 @@
 name: First Workflow
-on: [push]
+#on: [push] #  квадратные скобки нужны,если запускаются несколько ивентов
+on: workflow_dispatch
 
 jobs:
   run-first-command:

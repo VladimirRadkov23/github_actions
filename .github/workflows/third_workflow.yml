@@ -1,4 +1,4 @@
-name: Second Workflow
+name: Third Workflow
 on: [push]
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
           ls -a
       #- uses: actions/checkout@v4 # копируем репозиторий чекаутом
       - name: Copy Files
-        run: | # если список команд, то используем этот символ ( | )
+        run: | # если список команд, то используем этот символ ( | ) копируем с помощью гит команд
           git init
           git remote add origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
           git fetch origin

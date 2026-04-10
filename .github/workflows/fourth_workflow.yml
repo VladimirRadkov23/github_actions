@@ -1,0 +1,16 @@
+name: Fourth Workflow
+on:
+  # условие запуска: после завершения указанного здесь workflow (одного или массива из нескольких)
+  workflow_run:
+    workflows: [Third Workflow]
+    types:
+      - completed
+
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello
+        run:
+          echo "Hello"
+

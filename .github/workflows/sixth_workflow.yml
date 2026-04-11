@@ -23,5 +23,6 @@ jobs:
     steps:
       - name: Event vars
         run:
+          echo "Asd test"
           echo $GITHUB_SHA
           echo $GITHUB_REF

@@ -2,12 +2,12 @@ name: Third Workflow
 on: [push]
 
 jobs:
-  run-first-command:
+  run-my-command:
     runs-on: ubuntu-latest
     steps:
       - name: List Files
         run: | # смотрим что лежит в каталоге
-          asdls -a
+          ls -a
       #- uses: actions/checkout@v4 # копируем репозиторий чекаутом
       - name: Copy Files
         run: | # если список команд, то используем этот символ ( | ) копируем с помощью гит команд

@@ -3,7 +3,7 @@ name: Seventh Workflow
 
 on:
   schedules:
-    - cron: "*/2 * * * *" # мин/час/день/мес/ден нед
+    - cron: "*/5 * * * *" # мин/час/день/мес/ден нед
 
 jobs:
   run-first-command:

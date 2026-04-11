@@ -2,10 +2,12 @@ a = 6
 
 b = 2
 
-c = a + b
+c = 3
+
+d = a + b
 
 
-print(1 + 2)
+print(a + c)
 
-print(a, b, c)
+print(a, b, d)
 

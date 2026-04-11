@@ -2,7 +2,7 @@ name: Seventh Workflow
 #on: [push, issues, pull_request] # список иветнов для запуска
 
 on:
-  schedules:
+  schedule:
     - cron: "*/5 * * * *" # мин/час/день/мес/ден нед
 
 

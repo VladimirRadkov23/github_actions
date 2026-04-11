@@ -9,13 +9,11 @@ on:
 jobs:
   success_command:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == "success" }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-        run:
-          echo "Success"
-  failures_command:
+      - run: echo "Success"
+  failure_command:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == "failures" }}
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
-        run:
-          echo "Failed"
+      - run: echo "Failed"

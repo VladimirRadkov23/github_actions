@@ -5,7 +5,6 @@ on:
   schedule:
     - cron: "*/5 * * * *" # мин/час/день/мес/ден нед
 
-
 jobs:
   run-first-command:
     runs-on: ubuntu-latest

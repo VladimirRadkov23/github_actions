@@ -1,0 +1,15 @@
+name: Seventh Workflow
+#on: [push, issues, pull_request] # список иветнов для запуска
+
+on:
+  schedules:
+    - cron: "*/2 * * * *" # мин/час/день/мес/ден нед
+
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        run:
+          echo $GITHUB_SHA
+          echo $GITHUB_REF

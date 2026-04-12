@@ -1,0 +1,17 @@
+name: Then Workflow
+#on: [push, issues, pull_request] # список иветнов для запуска
+
+on: [push]
+
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Context and Expression
+        id: context-expression
+        run: |
+          echo " ${{ tojson(github) }}"
+          echo " ${{ tojson(runner) }}"
+          echo " ${{ tojson(job) }}"
+          echo " ${{ tojson(steps) }}"
+          

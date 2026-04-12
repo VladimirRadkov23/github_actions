@@ -1,13 +1,15 @@
-name: First Workflow
-on: [push] #  квадратные скобки нужны,если запускаются несколько ивентов
+name: Seventh Workflow
+#on: [push, issues, pull_request] # список иветнов для запуска
+
+on:
+  schedule:
+    - cron: "*/5 * * * *" # мин/час/день/мес/ден нед
 
 jobs:
   run-first-command:
     runs-on: ubuntu-latest
     steps:
-      - name: Display some Asd
-        run: echo "Some text"
-      - name: Display new Qwerty
-        run: |
-          node -v
-          npm -v
+      - name:
+        run:
+          echo "schedule ASD"
+          echo $GITHUB_REF

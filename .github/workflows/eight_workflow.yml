@@ -1,0 +1,20 @@
+name: Eight Workflow
+#on: [push, issues, pull_request] # список иветнов для запуска
+
+on:
+  workflow_dispatch:
+    inputs:
+      titleCustom:
+        description: Type the Title
+        type: string
+        required: true
+        default: "Hello World"
+
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        run:
+          echo "schedule ASD"
+          echo $GITHUB_REF

@@ -12,8 +12,8 @@ jobs:
       - name: Vars
         env: # переменная шага
           STEP_CUSTOM_VAR: STEP 1
-          WF_CUSTOM_VAR: WF 1 - STEP 1
-        run:
+          WF_CUSTOM_VAR: WF 1 - STEP 2
+        run: |
           echo $GITHUB_SHA
           echo ${{ github.ref }}
           echo $WF_CUSTOM_VAR # вывод переменной ранером

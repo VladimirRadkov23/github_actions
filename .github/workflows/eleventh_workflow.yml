@@ -9,6 +9,9 @@ jobs:
     env: # переменная джоба
       JOB_CUSTOM_VAR: JOB 1
     steps:
+      - name: Set New Var # вписываем переменную в файл еще одним способом:
+        run: echo "NEW_CUSTOM_VAR=New Value" >> "$GITHUB_ENV"
+
       - name: Vars
         env: # переменная шага
           STEP_CUSTOM_VAR: STEP 1
@@ -20,3 +23,4 @@ jobs:
           echo '${{ env.WF_CUSTOM_VAR }}' # переменная генерируется на стороне гитхаба
           echo $JOB_CUSTOM_VAR 
           echo $STEP_CUSTOM_VAR
+          echo $NEW_CUSTOM_VAR

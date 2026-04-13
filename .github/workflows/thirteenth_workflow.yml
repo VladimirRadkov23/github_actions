@@ -1,4 +1,4 @@
-# изучаем функции failure(), success(), always(), canceled()
+# изучаем функции failure(), success(), always(), cancelled()
 
 name: Thirteenth Workflow
 on: [push]
@@ -12,7 +12,7 @@ jobs:
         run: # установим тайм-аут
           sleep 30
       - name: Runs on Canceled # здесь canceled вернёт True, если предидущие шаги были отменены, в иных случаях этот run пропустится
-        if: ${{ canceled() }}
+        if: ${{ cancelled() }}
         run: echo "Runs on canceled"
 
       - name: Runs on any case # always запустится в любом случае

@@ -4,6 +4,7 @@ on: [push] # список иветнов для запуска
 jobs:
   run-first-command:
     runs-on: ubuntu-latest
+    environment: "production"
 
     steps:
       - name: Our Vars & Secrets

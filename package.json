@@ -1,0 +1,23 @@
+{
+  "name": "main_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladimirRadkov23/github_actions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladimirRadkov23/github_actions/issues"
+  },
+  "homepage": "https://github.com/VladimirRadkov23/github_actions#readme",
+  "dependencies": {
+    "axios": "^1.15.0"
+  }
+}

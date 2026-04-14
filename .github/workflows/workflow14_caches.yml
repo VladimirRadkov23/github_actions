@@ -12,8 +12,8 @@ jobs:
         uses: actions/cache@v3
         with: # передаём путь где хранится кэш
           path: ~/.npm
-          key: "cache-file" # имя файла / ключ по которому будет искаться этот кэш
-      - name: Cache node_modules # отображаем кэш по его id
+          key: "cache-file"   # имя файла / ключ по которому будет искаться этот кэш
+      - name: Display Cache # отображаем кэш по его id
         run: echo '${{ steps.cache-step.outputs }}'
       - name: Install node_modules # устанавливаем зависимости
         run: npm install

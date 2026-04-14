@@ -17,5 +17,5 @@ jobs:
       - name: Cache node_modules # отображаем кэш по его id
         run: echo '${{ steps.cache-step.outputs }}'
       - name: Install node_modules # устанавливаем зависимости
-        rum: npm install
+        run: npm install
 

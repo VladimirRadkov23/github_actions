@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/VladimirRadkov23/github_actions#readme",
   "dependencies": {
-    "axios": "^1.15.0"
+    "axios": "^1.15.0",
+    "swiper": "^12.1.3"
   }
 }

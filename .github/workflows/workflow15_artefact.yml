@@ -1,0 +1,16 @@
+# caches работа с кэшем
+name: Fifteenth Workflow
+on: push
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Math expression
+        run: expr 2 + 2 > math-result.txt
+      - name: Upload resalt file
+        uses: actions/upload-artifact@v3 # загружаем в файл
+        with:
+          name: math-result
+          path: math-result.txt
+

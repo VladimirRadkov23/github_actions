@@ -9,7 +9,7 @@ jobs:
       - name: Math expression
         run: expr 2 + 2 > math-result.txt
       - name: Upload resalt file
-        uses: actions/upload-artifact@v3 # загружаем в файл
+        uses: actions/upload-artifact@v7 # загружаем в файл
         with:
           name: math-result
           path: math-result.txt

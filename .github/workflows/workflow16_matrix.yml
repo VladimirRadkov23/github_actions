@@ -5,10 +5,15 @@ on: push
 
 jobs:
   testing-matrix-job:
+    continue_on_error: True # чтобы завершение джоба было успешным, даже если один из джобов вернёт неудачу
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest] # список систем
-        node-version: [14, 18] # список версий ноде
+        node-version: [12, 14, 18] # список версий ноде. Если 12 упадёт, остальные не запустятся
+      fail-fast: false # чтобы продолжить цепочку запусков, если вдруг один из джобов упадёт
+
+      max-parallel: 2 # ограничить количество паралельных запусков джобов
+
     runs-on: ${{ matrix.os }} # передаем список систем
     steps:
       - run: node -v

@@ -7,11 +7,12 @@ jobs:
   testing-matrix-job:
     strategy:
       matrix:
-        node-version: [12, 14, 18]
-    runs-on: ubuntu-latest
+        os: [ubuntu-latest, windows-latest] # список систем
+        node-version: [14, 18] # список версий ноде
+    runs-on: ${{ matrix.os }} # передаем список систем
     steps:
       - run: node -v
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ matrix.node-version }} # передаём список версий
       - run: node -v

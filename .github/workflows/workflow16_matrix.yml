@@ -16,7 +16,7 @@ jobs:
             node-version: 17
         exclude:                               # убрать из загрузки
           - os: ubuntu-latest
-            node-version: 17
+            node-version: 14
 
       fail-fast: false                         # чтобы продолжить цепочку запусков, если вдруг один из джобов упадёт
 

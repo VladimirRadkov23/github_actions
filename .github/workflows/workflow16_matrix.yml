@@ -1,44 +1,17 @@
-# работа с артефактами. сохранение ф файл, загрузка,изменение
-name: Fifteenth Workflow
+# работа с матрикс
+
+name: Sixteenth Workflow
 on: push
 
 jobs:
-  first-job:
+  testing-matrix-job:
+    strategy:
+      matrix:
+        node-version: [12, 14, 18]
     runs-on: ubuntu-latest
     steps:
-      - name: Math expression
-        run: expr 2 + 2 > math-result.txt
-      - name: Upload resalt file
-        uses: actions/upload-artifact@v7 # загружаем в файл
+      - run: node -v
+      - uses: actions/setup-node@v3
         with:
-          name: math-result
-          path: math-result.txt
-  another-job: # загружаем,меняем,возвращаем файл
-    runs-on: ubuntu-latest
-    needs: first-job
-    steps:
-      - name: Download file
-        uses: actions/download-artifact@v7 # загружаем файл
-        with:
-          name: math-result
-      - name: Math Expression
-        run: | # выводим значение
-          value=`cat math-result.txt`
-          expr $value \* 2 > math-result.txt
-      - name: Upload resalt file
-        uses: actions/upload-artifact@v7 # загружаем в файл
-        with:
-          name: math-result
-          path: math-result.txt
-  second-job:
-    runs-on: ubuntu-latest
-    needs: another-job
-    steps:
-      - name: Download file
-        uses: actions/download-artifact@v7 # загружаем файл
-        with:
-          name: math-result
-      - name: Print File
-        run: | # выводим значение
-          value=`cat math-result.txt`
-          echo $value
+          node-version: ${{ matrix.node-version }}
+      - run: node -v

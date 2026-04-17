@@ -25,6 +25,6 @@ jobs:
     outputs:      # создаём output на уровне job
       date: ${{ steps.date-step.outputs.date }}
 
-    steps: # создаём переменную date и кидаем ее в файл output
-      - run: echo "date=$(date)" >> $GITHUB_OUTPUT
+    steps: # создаём переменную date со значением текущей даты и кидаем ее в файл output
+      - run: echo "date=$(123)" >> $GITHUB_OUTPUT
         id: date-step     #  id шага, чтобы к нему можно было обратится

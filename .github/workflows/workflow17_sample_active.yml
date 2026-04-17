@@ -11,7 +11,13 @@ on:
           required: false
 
 jobs:
-  call-workflow:
+  call-workflow:    # открываем другой из этого репозитория
     uses: ./.github/workflows/workflow17_sample.yml   # путь к  workflow, который используем
     with:
       title: ${{ inputs.title }}
+
+  call-external-workflow:   # путь в другой репозиторий, к нужному workflow, добавляем ветку
+    uses: VladimirRadkov23/workflows/.github/workflows/workflow.yml@main
+    secrets:
+      PASSWORD: ${{ secrets.MY_PASSWORD }} # PASSWORD?
+

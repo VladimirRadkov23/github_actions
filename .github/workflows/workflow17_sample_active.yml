@@ -11,25 +11,7 @@ on:
           required: false
 
 jobs:
-  run-first-command:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Display some Asd
-        run: echo "Some text"
-      - name: Display node version on Ubuntu
-        run: |
-          node -v
-          npm -v
-  run-parallel-command: # паралельный запуск
-    runs-on: windows-latest
-    steps:
-      - name: Display node version on Windows
-        run: |
-          node -v
-  run-second-command:
-    runs-on: macos-latest
-    needs: [run-first-command] # чтобы он запустился, только когда завершиться указанные здесь джобы
-    steps:
-      - name: Display node version on Macos
-        run: |
-          node -v
+  call-workflow:
+    uses: ./.github/workflows/workflow17_sample.yml   # путь к  workflow, который используем
+    with:
+      title: ${{ inputs.title }}

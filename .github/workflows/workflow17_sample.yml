@@ -11,7 +11,9 @@ on:
         required: false
 
 jobs:
-  call-workflow:
-    uses: ./.github/workflows/workflow17_sample.yml   # путь к  workflow, который используем
-    with:
-      title: ${{ inputs.title }}
+  console-log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Title
+        run: echo '${{ inputs.title }}'
+

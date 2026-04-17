@@ -1,0 +1,17 @@
+# шаблон
+
+name: Reusable Workflow
+on:
+  workflow_call:     # запускается другим workflow
+    inputs:
+      title:
+        description: " Custom Title"
+        type: string
+        default: "Testing text title"
+        required: false
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/workflow17_sample.yml   # путь к  workflow, который используем
+    with:
+      title: ${{ inputs.title }}

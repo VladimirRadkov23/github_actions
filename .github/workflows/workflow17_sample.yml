@@ -14,6 +14,7 @@ on:
         value: ${{ 12345 }} # вытаскиваем значение из джоба
         #value: ${{ jobs.generate_output.outputs.date }} # вытаскиваем значение из джоба
 
+
 jobs:
   console-log:
     runs-on: ubuntu-latest

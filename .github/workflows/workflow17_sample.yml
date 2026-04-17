@@ -11,7 +11,8 @@ on:
         required: false
     outputs:
       date:
-        value: ${{ jobs.generate_output.outputs.date }} # вытаскиваем значение из джоба
+        value: ${{ 12345 }} # вытаскиваем значение из джоба
+        #value: ${{ jobs.generate_output.outputs.date }} # вытаскиваем значение из джоба
 
 jobs:
   console-log:

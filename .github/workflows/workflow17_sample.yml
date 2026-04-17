@@ -9,6 +9,9 @@ on:
         type: string
         default: "Testing text title"
         required: false
+    outputs:
+      date:
+        value: ${{ jobs.generate_output.outputs.date }} # вытаскиваем значение из джоба
 
 jobs:
   console-log:
@@ -17,3 +20,11 @@ jobs:
       - name: Print Title
         run: echo '${{ inputs.title }}'
 
+  generate-output:
+    runs-on: ubuntu-latest
+    outputs:      # создаём output на уровне job
+      date: ${{ steps.date-step.outputs.date }}
+
+    steps: # создаём переменную date и кидаем ее в файл output
+      - run: echo "date=$(date)" >> $GITHUB_OUTPUT
+        id: date-step     #  id шага, чтобы к нему можно было обратится

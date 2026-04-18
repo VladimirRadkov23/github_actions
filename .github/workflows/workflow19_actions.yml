@@ -10,5 +10,8 @@ jobs:
       - uses: actions/checkout@v4 # копируем репозиторий
       - name: Use Custom Action
         uses: ./.github/actions/cache-node-modules
+        with: # задаем доп параметры если надо
+          caching: 'false'
+
 
 

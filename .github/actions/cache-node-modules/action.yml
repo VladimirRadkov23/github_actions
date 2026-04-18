@@ -1,12 +1,17 @@
 
 name: 'Install and cache Node modules' # имя экшена
 description: 'Some Description'   # описание экшена
-
+inputs:  # для того чтобы получать параметры
+  caching:
+    required: false
+    description: "enable or disable caching"
+    default: 'true'
 
 runs: # указываем тип экшена
   using: 'composite'
   steps:
     - name: Cache node_modules
+      if: inputs.caching == 'true'
       id: cache-step
       uses: actions/cache@v3
       with:

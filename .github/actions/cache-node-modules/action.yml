@@ -6,6 +6,10 @@ inputs:  # для того чтобы получать параметры
     required: false
     description: "enable or disable caching"
     default: 'true'
+outputs:  # подключим если нужен вывод
+  status:
+    value: 'Active'
+    description: "Some Status"
 
 runs: # указываем тип экшена
   using: 'composite'

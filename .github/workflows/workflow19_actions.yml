@@ -1,0 +1,14 @@
+# caches работа с кэшем через action
+
+name: Fourteenth Workflow (19)
+on: workflow_dispatch
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 # копируем репозиторий
+      - name: Use Custom Action
+        uses: ./.github/actions/cache-node-modules
+
+

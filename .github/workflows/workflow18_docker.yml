@@ -19,7 +19,7 @@ jobs:
     steps:           #  шаги относятся уже к node
       - name: Display service image
         run:        # посмотрим на подключенный в джобе сервис
-          echo '${{ toJSON(jobs.services) }}'
+          echo '${{ toJSON(job.services) }}'
 
       - name: Display Node version
         run: |

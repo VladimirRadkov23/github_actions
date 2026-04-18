@@ -7,7 +7,7 @@ jobs:
   test-docker-container:    # открываем другой из этого репозитория
     runs-on: ubuntu-latest
     container:
-      image: 21-alpine3.17 # задаём версию node
+      image: node:21-alpine3.17 # задаём версию node
       env:
         NODE_ENV: development   #  введем какую нибудь переменную
       ports:

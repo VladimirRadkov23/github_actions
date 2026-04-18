@@ -1,0 +1,21 @@
+# работа с docker
+
+name: Docker Test
+on: push
+
+jobs:
+  test-docker-container:    # открываем другой из этого репозитория
+    runs-on: ubuntu-latest
+    container:
+      image: 21-alpine3.17 # задаём версию node
+      env:
+        NODE_ENV: development   #  введем какую нибудь переменную
+      ports:
+        - 80
+
+    steps: #  шаги относятся уже к node
+      - name: Display Node version
+        run: |
+          node -v
+          cat /etc/os-release
+

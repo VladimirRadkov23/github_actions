@@ -1,17 +1,12 @@
-# caches работа с кэшем через свой action
+# установка таймера, чтобы workflow не зацикливался
 
-name: Fourteenth Workflow (19)
-on: workflow_dispatch
+name: Twentieth Workflow(test timeout)
+on: push
 
 jobs:
-  first-job:
+  test-timeout:
     runs-on: ubuntu-latest
+    timeout-minutes: 1   # ставим таймер работы для workflow
     steps:
-      - uses: actions/checkout@v4 # копируем репозиторий
-      - name: Use Custom Action
-        uses: ./.github/actions/cache-node-modules
-        with: # задаем доп параметры если надо
-          caching: 'false'
-
-
-
+      - name: Some Step
+        run: sleep 100

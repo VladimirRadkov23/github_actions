@@ -6,7 +6,7 @@ on: workflow_dispatch
 
 concurrency:    # при таком concurrency при нескольких запусках будет работать последний запущенный
   group: conc_test_id
-  cancel_in_progress: true
+  cancel-in-progress: true
 
 jobs:
   test-timeout:

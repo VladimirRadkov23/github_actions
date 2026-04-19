@@ -1,4 +1,4 @@
-# caches работа с кэшем через action
+# caches работа с кэшем через свой action
 
 name: Fourteenth Workflow (19)
 on: workflow_dispatch

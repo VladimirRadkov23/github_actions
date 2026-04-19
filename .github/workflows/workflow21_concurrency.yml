@@ -4,7 +4,7 @@ name: Concorrency testing
 on: workflow_dispatch
 #concurrency: concurrency-testing-id # разрешает запускать только один воркфлоу и один ставит в ожидание,остальные отменяются
 
-concorrency:    # при таком concurrency при нескольких запусках будет работать последний запущенный
+concurrency:    # при таком concurrency при нескольких запусках будет работать последний запущенный
   group: conc_test_id
   cancel_in_progress: true
 

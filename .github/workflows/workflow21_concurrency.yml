@@ -1,7 +1,7 @@
 # ограничение количества одновременных запусков workflow
 
 name: Concorrency testing
-on: workflow dispatch
+on: workflow_dispatch
 concurrency: concurrency-testing-id # задаём id
 
 jobs:

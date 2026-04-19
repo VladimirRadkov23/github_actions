@@ -9,5 +9,5 @@ jobs:
     #timeout-minutes: 1   # ставим таймер работы для workflow на уровне джоба
     steps:
       - name: Some Step
-        run: sleep 100
+        run: sleep 25
         timeout-minutes: 1   # ставим таймер работы для workflow на уровне шага

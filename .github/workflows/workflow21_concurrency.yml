@@ -1,0 +1,13 @@
+# ограничение количества одновременных запусков workflow
+
+name: Concorrency testing
+on: workflow dispatch
+concurrency: concurrency-testing-id # задаём id
+
+jobs:
+  test-timeout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Some Step
+        run: sleep 35
+        timeout-minutes: 1   # ставим таймер работы для workflow на уровне шага

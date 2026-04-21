@@ -1,4 +1,4 @@
-# ограничение количества одновременных запусков workflow
+# деплой ci/cd
 
 name: Concorrency testing
 on: workflow_dispatch

@@ -1,3 +1,5 @@
+import datetime
+
 a = 6
 
 b = 2

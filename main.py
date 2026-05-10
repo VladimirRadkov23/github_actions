@@ -8,5 +8,6 @@ c = a + b
 
 print(1 + 2)
 
-print(a, b, c)
+
+print(a, b, c
 

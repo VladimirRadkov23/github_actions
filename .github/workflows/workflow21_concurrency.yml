@@ -8,8 +8,6 @@ jobs:
   console-log:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Title
-        run: echo 'test Asd'
       - uses: actions/checkout@v4
       - name: set up python
         id: setup-python
@@ -24,4 +22,4 @@ jobs:
         
       - name: Run mypy  #проверяем код линтером
         run: |
-          mypy main1.py
+          mypy main.py

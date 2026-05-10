@@ -1,8 +1,7 @@
-
 name: Then Workflow
 
 on: workflow_dispatch
-run-name: "Display Context info" # задаем кастомный заголовок если хотим
+run-name: "Display Context info"
 
 jobs:
   console-log:
@@ -20,6 +19,7 @@ jobs:
       - name: new Title
         run: echo 'new Asd'
         
-      - name: Run mypy  #проверяем код линтером
+      - name: Run mypy
         run: |
           mypy main.py
+          mypy main2.py

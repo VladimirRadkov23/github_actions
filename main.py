@@ -1,3 +1,5 @@
+import random
+
 a = 6
 
 b = 2

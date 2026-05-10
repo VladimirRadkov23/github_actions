@@ -1,12 +1,13 @@
 import datetime
 
-a = 6
+  a = 6
 
 b = 2
 
 c = a + b
 
-print("Hello")
+print("Hello"
+      
 print(1 + 2)
 
 print(a, b, c)
